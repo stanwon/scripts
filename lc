@@ -1,0 +1,11 @@
+#!/usr/bin/sh
+
+lcDir=~/Workspace/code/go/leetcode
+
+if [ -e $lcDir ] 
+then
+  cd $lcDir
+  nvim $lcDir/main.go
+else
+  echo no $lcDir
+fi

@@ -1,0 +1,9 @@
+#!/usr/bin/sh
+
+google=google-chrome-stable
+
+if which $google >/dev/null 2>&1; then
+  $google http://localhost:1313/notes/$1 --new-window >/dev/null 2>&1
+else
+  echo please install google
+fi

@@ -1,0 +1,11 @@
+#!/usr/bin/sh
+
+nvimConfigDir=~/.config/nvim/
+
+if [ -e $nvimConfigDir ] 
+then
+  cd $nvimConfigDir
+  nvim
+else
+  echo no $nvimConfigDir
+fi

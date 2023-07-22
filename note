@@ -1,0 +1,26 @@
+#!/usr/bin/sh
+
+
+if [ 1 != $# ]
+then
+  echo "Need one parameter."
+  exit 1
+fi
+
+siteDir=~/Workspace/stan-site
+notesDir=content/notes
+cd $siteDir
+
+if [ -e $notesDir/$1.md ]
+then
+  nvim $notesDir/$1.md
+else
+  echo "$1.md doesn't exist. Create it?"
+  read ans
+  if [ $ans == "yes" ] || [ $ans == "y" ]
+  then
+    hugo new $notesDir/$1.md
+  else
+    echo "Nothing to do."
+  fi
+fi

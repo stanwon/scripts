@@ -1,0 +1,10 @@
+#!/usr/bin/sh
+
+siteDir=~/Workspace/stan-site
+
+if [ -d $siteDir ]; then
+  cd $siteDir
+  hugo server -D &
+else
+  echo no site in $siteDir
+fi

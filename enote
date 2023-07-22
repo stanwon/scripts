@@ -1,0 +1,11 @@
+#!/usr/bin/sh
+
+scriptsDir=~/Workspace/scripts
+
+if [ -e $scriptsDir ] 
+then
+  cd $scriptsDir
+  nvim $scriptsDir/note
+else
+  echo no $note
+fi
